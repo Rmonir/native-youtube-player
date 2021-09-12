@@ -1,0 +1,7 @@
+{
+  "name": "native-youtube-player",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
