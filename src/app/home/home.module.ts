@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 
 @NgModule({
@@ -12,8 +13,13 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
+    
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [
+    YoutubeVideoPlayer
+    
+  ]
 })
 export class HomePageModule {}

@@ -7,14 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-list ion-padding>
+    <ion-item *ngFor="let video of playList" button (click)="play(video.id)">
+      <ion-thumbnail slot="start">
+        <img src="../../assets/imgs/artogrol.jpg" />
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        {{video.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <div id="dvPlayer">
   </div>
 </ion-content>
